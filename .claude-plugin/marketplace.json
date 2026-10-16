@@ -11,7 +11,7 @@
     {
       "name": "expert-review",
       "source": "./plugins/expert-review",
-      "description": "개발 설계 · 보안 · SEO 점검표로 읽기 전용 검토. 검토자는 모델이며 사람 전문가가 아니다."
+      "description": "개발 설계 · 보안 · SEO · 마케팅 점검표로 읽기 전용 검토. 검토자는 모델이며 사람 전문가가 아니다."
     }
   ]
 }
