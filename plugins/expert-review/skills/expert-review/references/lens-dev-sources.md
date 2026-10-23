@@ -19,8 +19,8 @@
 | D10 | `NEXT_PUBLIC_`는 빌드 때 박힌다 · `.env*`는 저장소에 올리지 말 것 · service_role은 RLS를 우회하므로 브라우저 · 소스 관리 금지 | R21 · R28 · R33 |
 | D11 | 조회 패턴에 맞춘 인덱스 · 실행 계획 · range()는 정렬 지정 필요 · N+1 공식 근거 없음 · 기본 1,000행 상한 공식 원문 미확인 | R16 · R17 · R24 · R25 |
 | D12 | 증상 중심 알림 · 이메일 알림은 묻힌다 · 로그는 이벤트 스트림 · 비밀번호 · 토큰은 기록 금지 · error 전체 기록 | R19 · R30 · R35 · R36 · R41 |
-| D13 | 기술 부채는 원금과 이자 · 자주 바뀌는 코드부터 | R39 |
-| D14 | 결정 기록은 저장소에 · 뒤집힌 결정은 '대체됨' 표시 | R40 |
+| D13 | 기술 부채는 원금과 이자 · 자주 바뀌는 코드부터(R39) · ISO/IEC 5055(CISQ) 유지보수성 약점에 죽은 코드(CWE-561) · 중복 코드(CWE-1041) · 과도한 주석 처리 코드(CWE-1085)가 들어 있음(R46) | R39 R46 |
+| D14 | 결정 기록은 저장소에 · 뒤집힌 결정은 '대체됨' 표시(R40) · AWS 공식 가이드: 받아들인 결정 기록은 고치지 않고 새 기록으로 대체하며 옛 기록 상태를 Superseded로 바꿈 · 코드 리뷰에서 결정 기록과 맞는지 대조(R47) | R40 R47 |
 | D15 | 멱등 키로 재시도 안전 · 웹훅 중복 · 순서 · 원격 호출마다 시간 제한 · 겹겹 재시도는 부하를 키운다 | R30 · R42~R45 |
 | D16 | 요금제별 백업 보존(Pro 7일 · Team 14일 · Enterprise 최대 30일) · 시점 복구는 별도 · Free는 백업 내려받기 불가 · Storage는 DB 백업에 없음 | R16 · R18 |
 | D17 | timestamptz는 UTC로 저장하고 세션 시간대로 보여 준다 · Vercel 크론은 항상 UTC | R10 · R31 |
@@ -74,5 +74,7 @@
 | R43 | Stripe Webhooks | https://docs.stripe.com/webhooks |
 | R44 | 토스페이먼츠 웹훅 연결하기 | https://docs.tosspayments.com/guides/v2/webhook |
 | R45 | AWS Timeouts, retries, and backoff with jitter (2019) | https://builder.aws.com/content/3EumjoZascWd1oZiEgL8ORlv3qE/timeouts-retries-and-backoff-with-jitter |
+| R46 | MITRE CWE-1307 「CISQ Quality Measures - Maintainability」(ISO/IEC 5055 유지보수성 약점 28개) | https://cwe.mitre.org/data/definitions/1307.html |
+| R47 | AWS Prescriptive Guidance 「ADR process」 | https://docs.aws.amazon.com/prescriptive-guidance/latest/architectural-decision-records/adr-process.html |
 
 못 연 것 · 근거를 못 찾은 것: PostgREST 공식 문서(429 — "호출 하나 = 트랜잭션 하나"는 2차 자료뿐), 개인정보 보호법 제21조 원문, Supabase 기본 1,000행 상한 원문, N+1 · "기대값을 대상 코드로 만들기"의 1차 근거, 토스 웹훅 중복 · 서명 · 순서 규정.
