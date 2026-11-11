@@ -22,15 +22,15 @@ SOFTWARE.
 
 ---
 
-NOTE — This MIT license does NOT cover the persona pack.
+NOTE — Third-party material (not covered by the MIT license above).
 
-The following files are a derivative of NVIDIA's Nemotron-Personas-Korea
-dataset and are licensed under Creative Commons Attribution 4.0 International
-(CC BY 4.0), NOT MIT:
-
-  plugins/virtual-customer-feedback/skills/virtual-customer-feedback/references/persona-index.md
-  plugins/virtual-customer-feedback/skills/virtual-customer-feedback/references/persona-cards.md
-  plugins/virtual-customer-feedback/skills/virtual-customer-feedback/references/sampling-record.md
-
-See NOTICE.md for the required attribution (full details in the pack's ATTRIBUTION.md,
-located alongside the persona files listed above).
+The unslop-derived portions of item X21 in
+  plugins/expert-review/skills/expert-review/references/lens-ux.md
+and its source notes in
+  plugins/expert-review/skills/expert-review/references/lens-ux-sources.md
+are adapted from "Signs of slop" by Damir Sokolovsky (@heydamir),
+https://github.com/heydamir/unslop, licensed under CC BY 4.0:
+https://creativecommons.org/licenses/by/4.0/
+Changes: selected, condensed, and translated into Korean.
+The MIT license above does not replace the attribution and license obligations
+applicable to this material. See lens-ux-sources.md for the attribution.
